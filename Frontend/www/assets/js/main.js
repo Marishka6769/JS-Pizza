@@ -1,7 +1,5 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-/**
- * Created by diana on 12.01.16.
- */
+
 
 var pizza_info = [
     {
@@ -177,9 +175,6 @@ var pizza_info = [
 
 module.exports = pizza_info;
 },{}],2:[function(require,module,exports){
-/**
- * Created by chaika on 02.02.16.
- */
 
 var ejs = require('ejs');
 
@@ -189,9 +184,6 @@ exports.PizzaMenu_OneItem = ejs.compile("<%\n\nfunction getIngredientsArray(pizz
 exports.PizzaCart_OneItem = ejs.compile("<div>\n    <%= pizza.title %> (<%= size %>)\n    <div>Ціна: <%= pizza[size].price %> грн.</div>\n    <div>\n        <button class=\"btn btn-danger minus\">-</button>\n        <span class=\"label label-default\"><%= quantity %></span>\n        <button class=\"btn btn-success plus\">+</button>\n    </div>\n</div>");
 
 },{"ejs":6}],3:[function(require,module,exports){
-/**
- * Created by chaika on 25.01.16.
- */
 
 $(function(){
     //This code will execute when the page is ready
@@ -205,9 +197,7 @@ $(function(){
 
 });
 },{"./Pizza_List":1,"./pizza/PizzaCart":4,"./pizza/PizzaMenu":5}],4:[function(require,module,exports){
-/**
- * Created by chaika on 02.02.16.
- */
+
 var Templates = require('../Templates');
 
 //Перелік розмірів піци
@@ -293,9 +283,7 @@ exports.initialiseCart = initialiseCart;
 
 exports.PizzaSize = PizzaSize;
 },{"../Templates":2}],5:[function(require,module,exports){
-/**
- * Created by chaika on 02.02.16.
- */
+
 var Templates = require('../Templates');
 var PizzaCart = require('./PizzaCart');
 var Pizza_List = require('../Pizza_List');
