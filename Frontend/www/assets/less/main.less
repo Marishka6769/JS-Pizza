@@ -1,16 +1,65 @@
-@mainColor: blue;
-
+@mainColor: orange;
 @import "pizza/pizza-card";
 @import "pizza/sale";
 @import "pizza/first-line";
-.wrap{
-  margin: auto;
+body{
+  min-width: 800px;
+}
+.pizza-card {
+  padding-top: 30px;
+  position: relative;
+  .description {
+    height: 66px;
+    overflow: hidden;
+    font-size: 15px;
+    text-overflow: ellipsis;
+  }
+  .pizza-small {
+    text-align: center;
+  }
+  .pizza-big {
+    text-align: center;
+  }
+  .type {
+    color: darkgrey;
+    font-size: 12px;
+  }
+  .pizza-popular {
+    top: 0;
+    position: absolute;
+    right: 0;
+  }
+  .pizza-new {
+    top: 0;
+    position: absolute;
+    right: 0;
+  }
+  .show {
+    visibility: visible;
+  }
+  .hide {
+    visibility: hidden;
+  }
+  .pizza-icon {
+    max-width: 300px;
+    width: 100%;
+  }
 }
 .right-panel{
+  background: white;
+  box-shadow: #dddddd;
   width: 320px;
+  min-width: 320px;
   height: 100%;
   top:0;
   right: 0;
+  bottom: 0;
+  padding-top: 35px;
+  padding-right: 0;
+  padding-left: 0;
+  margin-left: 0;
+  box-orient:vertical;
+  flex-direction: column;
   position: fixed;
   z-index: 15;
 }
@@ -18,7 +67,6 @@
   position: fixed;
   margin-left: 100px;
 }
-
 .hr {
   border: none;
   background-color: rgba(90, 86, 89, 0.36);
@@ -26,11 +74,80 @@
   height: 2px;
   margin-left: 10px;
 }
-
-
-
-
-
 .badge {
   background-color: orange!important;
+}
+.footer {
+  background-color: #fff9e9;
+  color: #858585;
+  padding: 40px 0;
+  padding-right: 330px;
+  text-align: center;
+  border-top: 2px solid #dddddd;
+}
+@media (max-width:800px) {
+  .sign-in-button{
+    margin-top: 44px;
+    padding: 0;
+    margin-left: 15px;
+    margin-right: 0;
+    text-align: start;
+  }
+  .number{
+    position: fixed;
+  }
+  .top-panel {
+    padding-left: 115px;
+    padding-right: 285px;
+  }
+  .left-panel {
+    padding-right: 297px;
+    padding-left: 18px;
+  }
+  .right-panel {
+    width: 280px;
+    min-width: 280px;
+  }
+}
+.left-panel {
+  max-width: 1354px;
+  margin: auto;
+  padding-left: 30px;
+  padding-right: 360px;
+  .all-pizza {
+    text-align: center;
+  }
+}
+.main-container {
+  min-width: 594px;
+  padding-top: 80px;
+}
+.name{
+  text-align: center;
+  font-size: 36px;
+  line-height: 100px;
+  font-weight: bold;
+  padding: 0 0 4px 0;
+  color: black;
+  position: relative;
+  z-index: 4;
+}
+.buyitnow{
+  float: right;
+  display: block;
+  position: fixed;
+  height: 90px;
+  padding-left: 35px;
+  text-align: center;
+}
+.title{
+  color: #ec560d;
+  font-size: 30px;
+  font-family: "Helvetica Neue";
+  font-weight: 700;
+}
+.bl{
+  font-size: 30px;
+  font-family: "Helvetica Neue";
+
 }
